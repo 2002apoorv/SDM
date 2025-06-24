@@ -146,7 +146,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch('http://localhost:5000/contact', {
+    fetch('https://sdm-backend-eight.vercel.app/contact', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -175,7 +175,7 @@ const Contact = () => {
   formData.append("resume", resumeFile);  // your PDF file
 
   try {
-    const response = await fetch("http://localhost:5000/upload", {
+    const response = await fetch("https://sdm-backend-eight.vercel.app/upload", {
       method: "POST",
       body: formData,
     });
